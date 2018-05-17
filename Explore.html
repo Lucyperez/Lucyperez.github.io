@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <link href="stylesheet.css" rel="stylesheet" />
+ </head>
+   <body>
+      <div class="page">
+      <div class="content">
+       <h1>AP Explore Task</h1>
+     
+         <table class="nav">
+          <tr>
+             <td><a href="index.html">Home</a></td>
+            <td><a href="Strenghts.html">Strenghts</a></td>
+            <td><a href="Explore.html">AP Explore Task</a></td>
+            <td><a href="Create.html">AP Create Task</a></td>
+             <td><a href="College.html">College</a></td>
+          </tr>
+        </table>
+ <p>
+ 2A)
+My program is written in JavaScript with the use of the
+p5.js library. The purpose of my program is to change the
+emojis randomly. In this video clip you can see how the
+different emojis change to another different emoji after
+the button is clicked. And how different emoji reactions
+change to random ones at a time. 
+</p>
+
+<p>
+2B) 
+My partner and I used iterative pair programming by first
+writing the sentences for the array, then we made an array
+in order for the programer to choose what word to replace
+with the name, age and ice Cream.  After that we used the 
+code to make the sentences pop up in the HTML. Finally we
+used the code math.random to choose random words from the
+string name, age and ice Cream when the button was clicked.
+My partner and I wrote sentences together so when the
+button was clicked it would changed the strings inside the
+name, age and ice Cream array randomly. Independently I
+created a program that changes the images when ever I 
+press the button. The first developmental challenge I 
+encountered was not knowing were I had an infinite loop 
+that was running forever.  It was important to fix the
+infinite loop running in my code because whenever I clicked
+the button it wouldn’t change to a random images. I solved
+this challenge by replacing the underscore with a star
+because links can’t have star in them. The second 
+evelopmental challenge I encountered was another 
+loop that was running forever that appeared in my 
+code happer fixing the loop mentioned before. It was 
+important to fix the loop that was running forever because 
+it broke the code. I solved this challenge by changing the
+letter in the code that was causing the code to brake. 
+</p>
+
+<p>
+2C
+while (s0.indexOf("*") !== -1)
+{
+    let wIndex = s0.indexOf("*;)*");
+    if (wIndex !== -1)
+    {
+     s0 = replace(s0, winky[Math.floor(Math.random()*4)], wIndex);
+     winkyCount = winkyCount + 1;
+    }
+     let hIndex = s1.indexOf("*:)*");
+     if (hIndex !== -1)
+    {
+      s1 = replace(s1, happy[Math.floor(Math.random()*4)], hIndex);
+       happyCount = happyCount + 1;
+    }
+    let sIndex = s2.indexOf("*:(*");
+     if (sIndex !== -1)
+     {
+     s2 = replace(s2, sad[Math.floor(Math.random()*4)], sIndex);
+      sadCount = sadCount + 1;
+     }
+
+ $("#out").html(s0);
+        $("#coco").html(s1);
+        $("#lily").html(s2);
+
+    function replace(str, replacement, index)
+        {
+           let before = str.slice(0, index);
+           let after = str.slice(index + 4);
+           let full = before + replacement + after;
+            return full;
+            }
+       }
+
+The purpose of this algorithm is to change the strings to formatted
+a message. When this function runs correctly, it takes the value
+of the input from the string to replace emojis tokens with images.
+The algorithm is able to achieve this result by looking for
+tokens in the string that resembles the winky, happy and sad face.
+When it finds a token it replaces the token with an image tag .
+If this program did not include this algorithm, it would not
+function as desired because it’s essential to the program. This 
+algorithm works with two other sub algorithms that are both 
+mathematical and that are function
+replace() and winky[Math.floor(Math.random()*4)] 
+winky[Math.floor(Math.random()*4)] sub algorithm is mathematical 
+and picks a random string from the array called let winky[]; So
+that each time the button is clicked it changes the winky face 
+to another different winky face. The replace() function works by
+calling before, after, and full. let before = str.slice(0, index);
+works by holding the string chunk before the winky face.
+let after = str.slice(index + 4); works by holds the string 
+chunk  after the winky face. And 
+let full = before + replacement + after; works by putting the 
+string that was taken before and after the token winky face all together. 
+</p>
+
+<p>
+2D)
+function replace(str, replacement, index)
+ {
+ // before holds the string chunk before the winky face 
+ let before = str.slice(0, index);
+ console.log(before);
+ //   after holds the string chunk after the winky face
+ let after = str.slice(index + 4);
+  console.log(after);
+ // 
+ let full = before + replacement + after;
+ return full;
+ }
+ 
+ 
+An example of an abstraction in my program is function replace(); 
+This simplifies my program by replacing the token emojis. I 
+created this function replace(); to avoid repeating the process 
+of inputting random strings that the array has. If this abstraction
+weren’t present, then the sentences wouldn’t select the token emojis 
+and therefore it wouldn’t make a sentence with the emojis changing
+randomly. 
+</p>
+
+    </div>
+   </div>
+  </body>
+</html>

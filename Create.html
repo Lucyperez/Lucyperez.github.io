@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="stylesheet.css" rel="stylesheet" />
+    </head>
+  <body>
+      <div class="page">
+      <div class="content">
+        <h1>AP Create Task</h1>
+   
+     <table class="nav">
+          <tr>
+             <td><a href="index.html">Home</a></td>
+            <td><a href="Strenghts.html">Strenghts</a></td>
+            <td><a href="Explore.html">AP Explore Task</a></td>
+            <td><a href="Create.html">AP Create Task</a></td>
+             <td><a href="College.html">College</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    
+    
+<style>
+    img {
+    width : 60px;
+    display:inline-block;
+    }
+    body {
+    background-color : white;
+    color:black;
+    }
+    
+    </style>
+    
+    <title>Random!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/script.js" defer></script>
+    </head>
+    <body>
+    <button id="hack">
+      Change!!!
+    </button>
+    <p id="out">,</p>
+    <p id="coco">,</p>
+    <p id="lily">,</p>
+        
+    <script>
+let sentences = [ " I'll see you later *;)* friend.",
+"Nice to meet you *:)* Fernando.",
+"My dog passed away yesterday. *:(*"
+];
+
+let winky = ['<img src="http://www.hey.fr/tools/emoji/ios_emoji_winking_face.png">','<img src="http://images.clipartpanda.com/smiley-face-transparent-background-dT6e7AAGc.png">', '<img src="http://cdn.shopify.com/s/files/1/1061/1924/products/Wink_Emoji_2_grande.png?v=1513251072">', '<img src="https://www.spreadshirt.com/image-server/v1/mp/designs/12386804,width=178,height=178/winking-smiley-face.png">'];
+
+let happy = ['<img src="https://cdn.shopify.com/s/files/1/1061/1924/files/Hugging_Face_Emoji_2028ce8b-c213-4d45-94aa-21e1a0842b4d_large.png?15202324258887420558" >', '<img src="https://cdn3.iconfinder.com/data/icons/musthave/256/Positive.png">', '<img src="https://cdn.shopify.com/s/files/1/1061/1924/products/Happy_Emoji_Icon_5c9b7b25-b215-4457-922d-fef519a08b06_large.png?v=1513251037">', '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mr._Smiley_Face.svg/1024px-Mr._Smiley_Face.svg.png">'];
+
+let sad = ['<img src="https://images.vexels.com/media/users/3/134551/isolated/lists/1fb74455a668b00b9ec2ab7d3092008b-emoticon-emoji-sad.png">', '<img src="http://www.pngmart.com/files/1/Sad-Emoji-PNG-Pic.png">', '<img src="https://clipart.info/images/minicovers/1499793247facebook-sad-emoji-like-png.png">', '<img src="https://vignette.wikia.nocookie.net/encountage/images/b/b6/Sad-smiley-with-tears.png/revision/latest?cb=20141222205526">'];
+
+ 
+
+let winkyCount = 0;
+let happyCount = 0;
+let sadCount = 0;
+
+$("#hack").click(function(){
+let s0 = sentences[0];
+let s1 = sentences[1];
+let s2 = sentences[2];
+
+
+ while (s0.indexOf("*") !== -1)
+{
+    let wIndex = s0.indexOf("*;)*");
+    if (wIndex !== -1)
+    {
+     s0 = replace(s0, winky[Math.floor(Math.random()*4)], wIndex);
+     winkyCount = winkyCount + 1;
+    }
+     let hIndex = s1.indexOf("*:)*");
+     if (hIndex !== -1)
+    {
+      s1 = replace(s1, happy[Math.floor(Math.random()*4)], hIndex);
+       happyCount = happyCount + 1;
+    }
+    let sIndex = s2.indexOf("*:(*");
+     if (sIndex !== -1)
+     {
+     s2 = replace(s2, sad[Math.floor(Math.random()*4)], sIndex);
+      sadCount = sadCount + 1;
+     }
+        
+        $("#out").html(s0);
+        $("#coco").html(s1);
+        $("#lily").html(s2);
+        
+        
+        function replace(str, replacement, index)
+        {
+            let before = str.slice(0, index);
+            console.log(before);
+        
+            let after = str.slice(index + 4);
+            console.log(after);
+            
+            let full = before + replacement + after;
+            return full;
+            }
+            
+       
+          }
+  }); 
+    </script>   
+    </body>
+</html>
