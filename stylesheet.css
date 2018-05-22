@@ -1,6 +1,6 @@
 body {
 
-  background-color: Brown;
+  background-color: aqua;
   margin: 0;
   padding: 0;
 }
@@ -8,8 +8,8 @@ body {
  text-align: center;
 }
  .content {
- background-color: Green;
- border: 2px solid blue;
+ background-color: Aqua;
+
  margin: 0 auto;
  width:720px ;
  
@@ -17,6 +17,8 @@ body {
   img {
   width:400px;
   text-align:center;
+ 
+  
  }
   h1 {
    display:flex;
@@ -28,7 +30,9 @@ body {
  }
 
 h3{
- text-align:center;
+  text-align:center;
+ border:2px solid purple;
+
 }
 p{
  text-align:center;
@@ -36,4 +40,31 @@ p{
 
 body{
   text-align:center;
+}
+#plane{
+ width:200px;
+}
+
+#pull{
+ width:300px;
+}
+
+#push{
+ width:300px;
+}
+
+#div{
+ width:200px;
+ }
+
+#pepe{
+ width:200px;
+}
+
+#hey{
+ width:200px;
+}
+
+#w{
+ width:400px;
 }
